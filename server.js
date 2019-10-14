@@ -26,8 +26,16 @@ connection.connect(function(err) {
     console.log("Connected as id: " + connection.threadId);
 });
 
+// Create Express route to post mySQL database data to web page
 app.get("/", function(req,res){
     connection.query("SELECT * FROM burgers;", function(err,data){
         res.render("index", {burgers:data});
+    });
+});
+
+app.post("/create", function(req,res){
+    connection.query("INSERT INTO burgers (burger_name) VALUES (?);", [req.body.burger_name], function(err,result){
+        if(err)throw err;
+        res.redirect("/");
     });
 });
