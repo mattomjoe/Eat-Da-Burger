@@ -19,18 +19,12 @@
                 {{/unless}}
             {{/each}}
         </ul>
-
-
     </div>
-
-
-
 </div>
 
 <div class="row"> <!-- Verify this section! -->
     <div class="col-sm-6">
         <h2>Devoured!</h2>
-
         <ul>
             {{#each burgers}}
                 {{#if devoured}}
@@ -45,20 +39,9 @@
 <h2>Add-Da-Burger</h2>
 
 <form class="create-form"> <!-- This section works! -->
-
     <div class="form-group">
         <label><!--for="addburger"-->Burger name:</label>
         <input type="text" id="addburger" name="burger">
         <button type="submit">SUBMIT</button>
-    </div>
-
-    {{!-- <div class="form-group">
-        <label for="devoured">Devour it!</label>
-        <br>
-        <input type="radio" name="devoured" value="1" checked>Devoured!
-        <br>
-        <input type="radio" name="devoured" value="0">Burger!
-    </div> --}}
-    
-    
+    </div> 
 </form>
