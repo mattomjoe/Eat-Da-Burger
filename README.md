@@ -1,4 +1,4 @@
-# burger
+# Eat Da Burger
 
 <h5>Project Description</h5>
 Utilizes Express and Handlebars to create and "devour" hamburgers.
